@@ -3,25 +3,45 @@
   "name": "instapaper",
   "title": "Instapaper",
   "description": "Adds stuff into instapaper",
-  "icon": "command-icon.png",
+  "icon": "logo.png",
   "author": "davesnx",
-  "categories": [
-    "Applications"
-  ],
+  "categories": ["Applications"],
   "license": "MIT",
   "commands": [
     {
-      "name": "index",
-      "title": "Run Script",
-      "description": "Template for running a script without any view",
-      "mode": "no-view"
+      "name": "add",
+      "title": "Add URL",
+      "description": "Push a URL to Instapaper",
+      "mode": "view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "username",
+      "type": "textfield",
+      "required": true,
+      "title": "Username",
+      "description": "Every user has a unique username (doesn't have to be an email address, but often is).",
+      "placeholder": "Enter your username (often the email)"
+    },
+    {
+      "name": "password",
+      "type": "password",
+      "required": true,
+      "title": "Password",
+      "description": "Your Instapaper's account password.",
+      "placeholder": "Enter your password"
     }
   ],
   "dependencies": {
     "@raycast/api": "^1.69.0",
+    "@types/request-promise": "^4.1.51",
     "crypto": "^1.0.1",
     "node-fetch": "^3.3.2",
-    "oauth-1.0a": "^2.2.6"
+    "oauth-1.0a": "^2.2.6",
+    "react": "^18.3.1",
+    "request-promise": "^4.2.6",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@raycast/eslint-config": "^1.0.6",

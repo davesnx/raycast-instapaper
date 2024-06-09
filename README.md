@@ -1,3 +1,5 @@
 # Instapaper
 
-Adds stuff into instapaper
+Push URL into Instapaper
+
+It requires `username` and `password`
